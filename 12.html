@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="left parts"></div>
+    <div class="center parts"></div>
+    <div class="right parts"></div>
+</div>
+
+<style>
+    body {
+        background: #F5D6B4;
+    }
+
+    .container {
+        position: relative;
+        width: 260px;
+        height: 100px;
+        margin: 100px auto;
+    }
+
+    .parts {
+        position: absolute;
+        border: 20px solid #D86F45;
+        width: 60px;
+        height: 30px;
+    }
+
+    .left,
+    .right {
+        bottom: 0;
+        border-top: 0;
+        border-radius: 0 0 100px 100px;
+    }
+
+    .center {
+        top: 0;
+        left: 80px;
+        border-bottom: 0;
+        border-radius: 100px 100px 0 0;
+    }
+
+    .right {
+        right: 0;
+    }
+
+    .left:before,
+    .right:after {
+        position: absolute;
+        bottom: 15px;
+        content: "";
+        border-radius: 100px;
+        width: 20px;
+        height: 25px;
+        background: #D86F45;
+    }
+
+    .left:before {
+        left: -20px;
+    }
+
+    .right:after {
+        right: -20px;
+    }
+</style>
